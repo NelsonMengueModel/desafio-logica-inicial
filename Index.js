@@ -1,1 +1,1 @@
-config --global credential.helper store
+console.log("Oi")
