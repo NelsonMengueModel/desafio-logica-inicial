@@ -1,0 +1,32 @@
+// 1. Criamos a função que recebe vitórias e derrotas como parâmetros
+function calcularNivel(vitorias, derrotas) {
+    // Cálculo do saldo
+    let saldoVitorias = vitorias - derrotas;
+    let nivel = "";
+
+    // 2. Estrutura de decisão para determinar o nível baseado nas VITÓRIAS
+    // Nota: O desafio pede para avaliar a quantidade de vitórias para o nível
+    if (vitorias <= 10) {
+        nivel = "Ferro";
+    } else if (vitorias >= 11 && vitorias <= 20) {
+        nivel = "Bronze";
+    } else if (vitorias >= 21 && vitorias <= 50) {
+        nivel = "Prata";
+    } else if (vitorias >= 51 && vitorias <= 80) {
+        nivel = "Ouro";
+    } else if (vitorias >= 81 && vitorias <= 90) {
+        nivel = "Diamante";
+    } else if (vitorias >= 91 && vitorias <= 100) {
+        nivel = "Lendário";
+    } else {
+        nivel = "Imortal";
+    }
+
+    // Retorna uma frase formatada
+    return `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`;
+}
+
+// 3. Chamada da função e exibição do resultado
+// Exemplo: 120 vitórias e 20 derrotas
+let resultado = calcularNivel(120, 20);
+console.log(resultado);
